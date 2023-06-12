@@ -249,15 +249,9 @@
                     <div class="card card-body border-0 shadow mb-4">
                         <h2 class="h5">Kirim Email</h2>
                         <br>
-                        <form enctype="multipart/form-data" method="POST" action="send.php">
+                        <form>
                             <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div>
-                                      <label for="from">Email Pengirim</label>
-                                      <input class="form-control" name="from" id="from" type="email" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
+                                <div class="col-md-12 mb-3">
                                 <label for="to">Email Penerima</label>
                                     <select class="form-select mb-0" name="to" id="to" aria-label="email select example">
                                         <option selected>Email</option>
@@ -266,36 +260,15 @@
                                         $a = "SELECT * FROM karyawan";
                                         $b = $koneksi->query($a);
                                         while ($c=$b->fetch_array()){
-                                            echo "<option value=$c[email]> $c[email] </option>";
+                                            echo "<option value=$c[email]> $c[nama] </option>";
                                         }
                                         ?>
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div>
-                                      <label for="subject">Subject</label>
-                                      <input class="form-control" name="subject" id="subject" type="text" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div>
-                                        <label for="attachment">File</label>
-                                        <input class="form-control" name="attachment" id="attachment" type="file" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 mb-3">
-                                    <div>
-                                      <label for="fromname">Pesan</label>
-                                      <input class="form-control" name="fromname" id="fromname" type="text" required>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="mt-3">
-                              <input class="btn btn-behance mt-2 animate-up-2" type="submit" value="Send">
+                              <a class="btn btn-behance mt-2 animate-up-2" href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=afrauliansyah7@gmail.com" id="kirim">Lanjutkan</a>
+                              <!-- <input class="btn btn-behance mt-2 animate-up-2" type="submit" value="Lanjutkan"> -->
                                 <!-- <button class="btn btn-behance mt-2 animate-up-2" type="submit">Kirim</button> -->
                                 <a href="datarapat.php">
                                   <button class="btn btn-paypal mt-2 d-inline-flex align-items-center" type="button">
@@ -316,7 +289,13 @@
     </div>
 </footer> -->
 </main>
-
+<script>
+    const to = document.getElementById("to")
+    const btnkirim = document.getElementById("kirim")
+    to.addEventListener("input", () => {
+      btnkirim.setAttribute("href", "https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=" + to.value)
+    })
+</script>
     <!-- Core -->
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>

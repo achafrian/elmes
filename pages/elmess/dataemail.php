@@ -257,45 +257,27 @@
                     <div class="card card-body border-0 shadow mb-4">
                         <h2 class="h5">Kirim Email</h2>
                         <br>
-                        <form action="send.php" method="POST" enctype="multipart/form-data">
+                        <form>
                             <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div>
-                                        <label for="nama">Nama</label>
-                                        <input class="form-control" name="name" id="nama" type="text" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                <label for="email">Email</label>
-                                    <select class="form-select mb-0" name="email" id="email" aria-label="email select example">
+                                <div class="col-md-12 mb-3">
+                                <label for="to">Email Penerima</label>
+                                    <select class="form-select mb-0" name="to" id="to" aria-label="email select example">
                                         <option selected>Email</option>
                                         <?php
                                         include "koneksi.php";
                                         $a = "SELECT * FROM karyawan";
                                         $b = $koneksi->query($a);
                                         while ($c=$b->fetch_array()){
-                                            echo "<option value=$c[id_karyawan]> $c[email] </option>";
+                                            echo "<option value=$c[email]> $c[nama] </option>";
                                         }
                                         ?>
                                     </select>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <div>
-                                      <label for="pesan">Pesan</label>
-                                      <input class="form-control" name="message" id="pesan" type="text" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <div>
-                                        <label for="file">File</label>
-                                        <input class="form-control" name="file" id="file" type="file" required>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="mt-3">
-                                <button class="btn btn-behance mt-2 animate-up-2" type="submit">Kirim</button>
+                              <a class="btn btn-behance mt-2 animate-up-2" href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=afrauliansyah7@gmail.com" id="kirim">Lanjutkan</a>
+                              <!-- <input class="btn btn-behance mt-2 animate-up-2" type="submit" value="Lanjutkan"> -->
+                                <!-- <button class="btn btn-behance mt-2 animate-up-2" type="submit">Kirim</button> -->
                                 <a href="datarapat.php">
                                   <button class="btn btn-paypal mt-2 d-inline-flex align-items-center" type="button">
                                     Kembali
@@ -315,7 +297,13 @@
     </div>
 </footer> -->
 </main>
-
+<script>
+    const to = document.getElementById("to")
+    const btnkirim = document.getElementById("kirim")
+    to.addEventListener("input", () => {
+      btnkirim.setAttribute("href", "https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=" + to.value)
+    })
+</script>
     <!-- Core -->
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
