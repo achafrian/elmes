@@ -224,7 +224,7 @@
                                   <table id="customers">
                                       <thead>
                                           <tr>
-                                            <th>Divisi Perusahaan</th>
+                                            <th>Nama</th>
                                             <th>Jabatan</th>
                                           </tr>
                                         </thead>
@@ -235,7 +235,7 @@
                                             $b = $koneksi->query($a);
                                             while ($c = $b -> fetch_array()){?>
                                             <tr>
-                                              <td><?php echo $c['divisi']?></td>
+                                              <td><?php echo $c['nama']?></td>
                                               <td><?php echo $c['jabatan']?></td>
                                             </tr>
                                             <?php

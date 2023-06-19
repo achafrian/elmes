@@ -191,7 +191,7 @@
                             <thead>
                                 <tr>
                                   <th>Judul Rapat</th>
-                                  <th>Divisi</th>
+                                  <th>Nama Peserta</th>
                                   <th>Tanggal</th>
                                   <th>Waktu</th>
                                   <th>Pelaksanaan</th>
@@ -204,17 +204,17 @@
                               <tbody>
                                 <?php
                                   include "koneksi.php";
-                                  $a = "SELECT id_notulensi, judulrapat, divisi, tanggal, waktu, pelaksanaan, tempat, notulensi, statuss FROM notulensi INNER JOIN rapat ON notulensi.id_rapat = rapat.id_rapat";
+                                  $a = "SELECT id_notulensi, judulrapat, nama, tanggal, waktu, pelaksanaan, tempat, notulensi, statuss FROM notulensi INNER JOIN rapat ON notulensi.id_rapat = rapat.id_rapat";
                                   $b = $koneksi->query($a);
                                   while ($c = $b -> fetch_array()){?>
                                   <tr>
                                     <td><?php echo $c['judulrapat']?></td>
-                                    <td><?php echo $c['divisi']?></td>
+                                    <td><?php echo $c['nama']?></td>
                                     <td><?php echo $c['tanggal']?></td>
                                     <td><?php echo $c['waktu']?></td>
                                     <td><?php echo $c['pelaksanaan']?></td>
-                                    <td><?php echo substr ($c['tempat'],0,50)?></td>
-                                    <td><?php echo substr ($c['notulensi'],0,50)?></td>
+                                    <td><?php echo substr ($c['tempat'],0,40)?></td>
+                                    <td><?php echo substr ($c['notulensi'],0,40)?></td>
                                     <td><?php echo $c['statuss']?></td>
                                     <td width="30px">
                                       <a class="button button3" href="cetaknotulensi.php?id=

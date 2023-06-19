@@ -203,17 +203,10 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
-                                <label for="divisi">Divisi</label>
-                                    <select class="form-select mb-0" name="divisi" id="divisi" value="<?php echo $c['divisi'] ?>">
-                                        <option selected>Divisi</option>
-                                        <option value="Manajemen" <?php if($c['divisi'] == 'Manajemen') { ?> selected="selected"<?php } ?>>Manajemen</option>
-                                        <option value="Keuangan" <?php if($c['divisi'] == 'Keuangan') { ?> selected="selected"<?php } ?>>Keuangan</option>
-                                        <option value="Hubungan Masyarakat" <?php if($c['divisi'] == 'Hubungan Masyarakat') { ?> selected="selected"<?php } ?>>Hubungan Masyarakat</option>
-                                        <option value="Sekretariat" <?php if($c['divisi'] == 'Sekretariat') { ?> selected="selected"<?php } ?>>Sekretariat</option>
-                                        <option value="Tenaga Medis" <?php if($c['divisi'] == 'Tenaga Medis') { ?> selected="selected"<?php } ?>>Tenaga Medis</option>
-                                        <option value="Sarana Prasarana" <?php if($c['divisi'] == 'Sarana Prasarana') { ?> selected="selected"<?php } ?>>Sarana Prasarana</option>
-                                        <option value="Keamanan"v <?php if($c['divisi'] == 'Keamanan') { ?> selected="selected"<?php } ?>>Keamanan</option>
-                                    </select>
+                                    <div>
+                                        <label for="nama">Nama Peserta</label>
+                                        <input class="form-control" name="nama" id="nama" type="text" value="<?php echo $c['nama'] ?>">
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">

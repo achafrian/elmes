@@ -9,11 +9,11 @@
 <body>
     <?php
         $host = "localhost"; //untuk host
-        $username = "bengak"; //untuk username
-        $password = "bengak"; //untuk password
-        $database = "elmes"; //untuk nama database
+        $username = "root"; //untuk username
+        $password = ""; //untuk password
+        $database = "rapat"; //untuk nama database
         $koneksi = mysqli_connect($host, $username, $password, $database);
-
+        
         if($koneksi){
             echo "";
         } else {

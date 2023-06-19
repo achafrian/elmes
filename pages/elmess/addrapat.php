@@ -184,7 +184,7 @@
               <div class="row">
                 <div class="col-12 col-xl-12">
                     <div class="card card-body border-0 shadow mb-4">
-                        <h2 class="h5">Tambah Data Armada</h2>
+                        <h2 class="h5">Tambah Data Rapat</h2>
                         <br>
                         <form action="actaddrapat.php" method="POST">
                             <div class="row">
@@ -202,18 +202,11 @@
                                         <input type="checkbox" name="divisi" value="Programming"> C<br> 
                                     </div>
                                 </div> -->
-                                <div class="col-md-6 mb-3">
-                                <label for="divisi">Divisi</label>
-                                    <select class="form-select mb-0" name="divisi" id="divisi" aria-label="divisi select example">
-                                        <option selected>Divisi</option>
-                                        <option value="Manajemen">Manajemen</option>
-                                        <option value="Keuangan">Keuangan</option>
-                                        <option value="Hubungan Masyarakat">Hubungan Masyarakat</option>
-                                        <option value="Sekretariat">Sekretariat</option>
-                                        <option value="Tenaga Medis">Tenaga Medis</option>
-                                        <option value="Sarana Prasarana">Sarana Prasarana</option>
-                                        <option value="Keamanan">Keamanan</option>
-                                    </select>
+                                 <div class="col-md-6 mb-3">
+                                    <div>
+                                        <label for="nama">Nama Peserta Rapat</label>
+                                        <input class="form-control" name="nama" id="nama" type="text" required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">

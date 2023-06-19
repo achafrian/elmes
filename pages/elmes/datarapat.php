@@ -191,7 +191,7 @@
                             <thead>
                                 <tr>
                                   <th>Judul Rapat</th>
-                                  <th>Divisi</th>
+                                  <th>Nama Peserta</th>
                                   <th>Tanggal</th>
                                   <th>Waktu</th>
                                   <th>Pelaksanaan</th>
@@ -208,7 +208,7 @@
                                   while ($c = $b -> fetch_array()){?>
                                   <tr>
                                     <td><?php echo $c['judulrapat']?></td>
-                                    <td><?php echo $c['divisi']?></td>
+                                    <td><?php echo $c['nama']?></td>
                                     <td><?php echo $c['tanggal']?></td>
                                     <td><?php echo $c['waktu']?></td>
                                     <td><?php echo $c['pelaksanaan']?></td>

@@ -189,11 +189,7 @@
                                   $a = "SELECT * FROM rapat";
                                   $b = $koneksi->query($a);
                                   while ($c=$b->fetch_array()){
-                                    if($c['status']=="Disetujui"){
-                                        echo "<option value=$c[id_rapat]> $c[judulrapat] </option>";
-                                      }else{
-
-                                      }
+                                      echo "<option value=$c[id_rapat]> $c[judulrapat] </option>";
                                   }
                                   ?>
                                 </select>

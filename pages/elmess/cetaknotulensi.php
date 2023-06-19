@@ -153,7 +153,7 @@
               <?php
               include "koneksi.php";
               $id = $_GET['id'];
-              $a = "SELECT id_notulensi, judulrapat, divisi, tanggal, waktu, pelaksanaan, tempat, notulensi FROM notulensi INNER JOIN rapat ON notulensi.id_rapat = rapat.id_rapat WHERE id_notulensi='$id'";
+              $a = "SELECT id_notulensi, judulrapat, nama, tanggal, waktu, pelaksanaan, tempat, notulensi FROM notulensi INNER JOIN rapat ON notulensi.id_rapat = rapat.id_rapat WHERE id_notulensi='$id'";
               $b = $koneksi->query($a);
               while ($c = $b -> fetch_array()){?>
               <div class="py-2">
@@ -172,7 +172,7 @@
                             <thead>
                                 <tr>
                                   <th>Judul Rapat</th>
-                                  <th>Divisi</th>
+                                  <th>Nama Peserta</th>
                                   <th>Tanggal</th>
                                   <th>Waktu</th>
                                   <th>Pelaksanaan</th>
@@ -182,7 +182,7 @@
                               <tbody>
                                 <tr>
                                   <td><?php echo $c['judulrapat']?></td>
-                                  <td><?php echo $c['divisi']?></td>
+                                  <td><?php echo $c['nama']?></td>
                                   <td><?php echo $c['tanggal']?></td>
                                   <td><?php echo $c['waktu']?></td>
                                   <td><?php echo $c['pelaksanaan']?></td>
