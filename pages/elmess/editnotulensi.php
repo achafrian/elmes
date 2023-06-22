@@ -185,7 +185,7 @@
               <div class="row">
                 <div class="col-12 col-xl-12">
                     <div class="card card-body border-0 shadow mb-4">
-                        <h2 class="h5">Edit Notulensi</h2>
+                        <h2 class="h5">Edit Data Notulensi</h2>
                         <br>
                         <form action="acteditnotulensi.php" method="POST">
                             <div class="row">

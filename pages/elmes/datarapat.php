@@ -215,7 +215,7 @@
                                     <td><?php echo $c['tempat']?></td>
                                     <td><?php echo $c['status']?></td>
                                     <td width="30px">
-                                      <a class="button button3" href="cetakrapat.php?id=
+                                      <a class="button button3" href="undangan.php?id=
                                       <?php
                                       if($c['status']=="Disetujui"){
                                         echo $c['id_rapat'];

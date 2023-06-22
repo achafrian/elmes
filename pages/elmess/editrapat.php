@@ -184,7 +184,7 @@
               <div class="row">
                 <div class="col-12 col-xl-12">
                     <div class="card card-body border-0 shadow mb-4">
-                        <h2 class="h5">Edit Data Armada</h2>
+                        <h2 class="h5">Edit Data Rapat</h2>
                         <br>
                         <?php
                         include "koneksi.php";
